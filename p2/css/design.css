@@ -1,0 +1,64 @@
+*{
+	font-family:"roboto";
+}
+body{
+	
+
+	text-align:center;
+}	
+header{
+	background-color: #ffaaaa;
+	padding:25px;
+	top:0px;
+	left:0px;
+	width:100%;
+}
+.article{
+	min-height:75vh;
+	overflow:auto;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+img{
+	border-radius:25px;
+}	
+#Debate{
+	padding:50px;
+}	
+table,th,td{
+	border:2px solid black;
+}
+table{
+	border-collapse:collapse;
+	margin:0 auto;
+}
+
+#jimmy{
+	float: right;
+	
+}
+#srv{
+	float:left;
+	
+}
+#blocker{
+	clear:both;
+}
+h3{
+	text-decoration: underline;
+	margin-top:25px;
+}
+.container-fluid{
+	height: 100vh;
+	overflow-y:scroll;
+
+}
+
+#Conclusions{
+	background-color: #dddddd;
+}
+#Debate{
+	background-color: #dddddd;
+}
