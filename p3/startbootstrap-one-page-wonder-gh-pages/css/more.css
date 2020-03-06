@@ -1,0 +1,42 @@
+#head{
+background: linear-gradient(0deg,#2f2c2b 0,#420f80 100%);
+}
+section{
+	background:#2f2c2b;
+}
+.left{
+	color:#ff6a00;
+}
+.right{
+	color:#ee0979;
+}
+p{
+	color:white;
+	font-size: 2rem;
+}
+#m:hover{
+	color: var(--orange);
+}
+#v:hover{
+	color:#f0c986;
+}
+#e:hover{
+	color: var(--info);
+}
+#ma:hover{
+	color: var(--red);
+}
+#j:hover{
+	color: #a65323;
+}
+#s:hover{
+	color: var(--yellow);
+}
+#u:hover{
+	color: var(--teal);
+}#n:hover{
+	color: var(--primary);
+}
+#p:hover{
+	color: #d1be9f;
+}
