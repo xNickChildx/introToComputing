@@ -1,0 +1,51 @@
+body {
+   font-family: Helvetica, sans-serif;
+   color: #555;
+   background-color: #e6f2ff;
+}
+
+#weather-input div {
+   padding-bottom: 8px;
+}
+
+.hidden {
+   display: none;
+}
+
+.error-msg {
+   color: red;
+}
+
+table {
+   margin-bottom: 15px;
+   display:inline-block;
+}
+
+table caption {
+   font-weight: bold;
+}
+
+table td {
+   text-align: center;
+   padding: 3px 8px;
+}
+.suns{
+   height:30px;
+   width:30px;
+}
+.container{
+   align-items: center;
+   text-align: center;
+}
+caption{
+   caption-side: top;
+}
+label{
+   color:white;
+}
+#city2sect{
+   color:white;
+}
+#city2-name{
+   color:white;
+}

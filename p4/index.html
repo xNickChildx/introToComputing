@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>P4</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.min.css" rel="stylesheet">
+
+  <!--My CSs-->
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="weather.js"></script>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Weather Comparer</a>
+   
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">Weather Comparer</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">A program to get the forecast of two cities using OpenWeather's API and Bootstrap.</h2>
+         <section id="weather-input">
+         <div>
+            <label for="city1">City 1:</label>
+            <input type="text" id="city1">
+            <span class="error-msg hidden" id="error-value-city1">Enter a city</span>
+         </div>
+         <div>
+            <label for="city2">City 2:</label>
+            <input type="text" id="city2">
+            <span class="error-msg hidden" id="error-value-city2">Enter a city</span>
+         </div>
+         <div>
+            <button class="btn btn-primary js-scroll-trigger"id="compareBtn">Compare</button>
+         </div>
+      </section>
+      
+      </div>
+    </div>
+  </header>
+
+ 
+<section id="forecast" class="hidden">
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
+
+        
+         <h2>5 Day Forecast</h2>
+
+         <p id="loading-city1">Loading...</p>
+         <p id="error-loading-city1" class="error-msg"></p>
+         <table id="results-city1">
+            <caption id="city1-name"></caption>
+         
+            <tr>
+               <td></td>
+               <td id="city1-day1-name"></td>
+               <td id="city1-day2-name"></td>
+               <td id="city1-day3-name"></td>
+               <td id="city1-day4-name"></td>
+               <td id="city1-day5-name"></td>
+            </tr>
+            <tr>
+               <td>High</td>
+               <td id="city1-day1-high"></td>
+               <td id="city1-day2-high"></td>
+               <td id="city1-day3-high"></td>
+               <td id="city1-day4-high"></td>
+               <td id="city1-day5-high"></td>
+            </tr>
+            <tr>
+               <td> Low</td>
+               <td id="city1-day1-low"></td>
+               <td id="city1-day2-low"></td>
+               <td id="city1-day3-low"></td>
+               <td id="city1-day4-low"></td>
+               <td id="city1-day5-low"></td>
+            </tr>
+            <tr>
+               <td></td>
+               <td><img id="city1-day1-image"></td>
+               <td><img id="city1-day2-image"></td>
+               <td><img id="city1-day3-image"></td>
+               <td><img id="city1-day4-image"></td>
+               <td><img id="city1-day5-image"></td>
+            </tr>
+
+               <tr>
+                  <td></td>
+                  <td></td>
+               <td id="city1-sunrise"><span id="city1-sunrise-txt"></span><img class="suns" id="city1-rise-img"></td>
+               <td id="city1-sunset"><span id="city1-sunset-txt"></span><img class="suns" id="city1-set-img"></td>
+            </tr>
+         </table>
+
+        
+      
+      </div>
+
+   
+
+      
+    
+  </section>
+
+  <!-- Signup Section -->
+  <section id="signup" class="signup-section">
+    <div class="container" id="city2sect">
+       <p id="loading-city2">Loading...</p>
+         <p id="error-loading-city2" class="error-msg"></p>
+         <table id="results-city2">
+            <caption id="city2-name" ></caption>
+          
+            <tr>
+               <td></td>
+               <td id="city2-day1-name"></td>
+               <td id="city2-day2-name"></td>
+               <td id="city2-day3-name"></td>
+               <td id="city2-day4-name"></td>
+               <td id="city2-day5-name"></td>
+            </tr>
+            <tr>
+               <td>High</td>
+               <td id="city2-day1-high"></td>
+               <td id="city2-day2-high"></td>
+               <td id="city2-day3-high"></td>
+               <td id="city2-day4-high"></td>
+               <td id="city2-day5-high"></td>
+            </tr>
+            <tr>
+               <td>Low</td>
+               <td id="city2-day1-low"></td>
+               <td id="city2-day2-low"></td>
+               <td id="city2-day3-low"></td>
+               <td id="city2-day4-low"></td>
+               <td id="city2-day5-low"></td>
+            </tr>
+            <tr>
+               <td></td>
+               <td><img id="city2-day1-image"></td>
+               <td><img id="city2-day2-image"></td>
+               <td><img id="city2-day3-image"></td>
+               <td><img id="city2-day4-image"></td>
+               <td><img id="city2-day5-image"></td>
+            </tr>
+
+              <tr>
+               <td></td>
+                  <td></td>
+               <td id="city2-sunrise"><span id="city2-sunrise-txt"></span><img height="10%"width="10%"class="suns" id="city2-rise-img"></td>
+               <td id="city2-sunset"><span id="city2-sunset-txt"></span><img class="suns" id="city2-set-img"></td>
+               
+            </tr>
+         </table>
+      
+    </div>
+  </section>
+</section>
+  <!-- Contact Section -->
+
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Nick Child, Bootstrap, OpenWeather 2019
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.min.js"></script>
+
+</body>
+
+</html>
